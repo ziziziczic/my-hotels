@@ -1,5 +1,4 @@
-const MoPage = () => {
-  return <div>MoPage</div>;
+const Page = () => {
+  return <></>;
 };
-
-export default MoPage;
+export default Page;

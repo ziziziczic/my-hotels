@@ -1,7 +1,7 @@
 import { hotelItem } from '@/app/api/hotelList/route';
 
-const PcPage = ({ hotelList }: { hotelList: hotelItem[] }) => {
+const MoPage = ({ hotelList }: { hotelList: hotelItem[] }) => {
   return <div>{hotelList.map((hotel) => hotel.hotelName)}</div>;
 };
 
-export default PcPage;
+export default MoPage;
