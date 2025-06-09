@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     API_BASE_URL:
       process.env.NODE_ENV === 'production'
-        ? 'https://your-app-domain.com'
+        ? 'https://my-hotels.vercel.app/'
         : 'http://localhost:3000',
   },
 };
