@@ -6,9 +6,6 @@ export interface hotelItem {
   price: number;
 }
 
-export interface HotelListApiResponse {
-  hotelList: hotelItem[];
-}
 // get 요청을 처리하는 함수
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const GET = (requset: NextRequest) => {
@@ -36,7 +33,7 @@ const GET = (requset: NextRequest) => {
     },
   ];
 
-  return NextResponse.json({ hotelList });
+  return NextResponse.json([...hotelList]);
 };
 
 export { GET };
