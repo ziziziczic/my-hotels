@@ -1,0 +1,31 @@
+// app/api
+import { NextRequest, NextResponse } from 'next/server';
+
+export interface hotelItem {
+  hotelName: string;
+  price: number;
+}
+
+// get 요청을 처리하는 함수
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const GET = (requset: NextRequest) => {
+  // 하드 코딩된 호텔 리스트 반환
+  const hotelList = [
+    {
+      hotelName: '종로 그랜드 하얏트',
+      price: 180000,
+    },
+    {
+      hotelName: '종로 신라 호텔',
+      price: 190000,
+    },
+    {
+      hotelName: '종로 롯데 호텔',
+      price: 200000,
+    },
+  ];
+
+  return NextResponse.json([...hotelList]);
+};
+
+export { GET };
