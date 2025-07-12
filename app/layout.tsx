@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-// import { Geist, Geist_Mono } from 'next/font/google';
+import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import { headers } from 'next/headers';
 import MoPage from '@/app/(mo)/MoPage';
@@ -7,15 +7,11 @@ import PcPage from '@/app/(pc)/PcPage';
 import { getHotelList } from './lib/fetch/getHotelList';
 import { isMobileDevice } from './lib/isMobileDevice';
 
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin'],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin'],
-// });
+const notoSans = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -33,8 +29,8 @@ const RootLayout = async ({}: Readonly<{
   console.log(hotelList);
 
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
+    <html lang="ko">
+      <body className={notoSans.className}>
         {isMobileDevice(userAgent) ? (
           <MoPage hotelList={hotelList} />
         ) : (
