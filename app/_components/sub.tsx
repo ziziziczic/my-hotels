@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ReviewActionContext, ReviewContext } from '../_provider/useReview';
+import { ReviewActionContext, ReviewContext } from '../_store/useReviewStore';
 
 export default function Sub() {
   const { handleReviewIndex } = useContext(ReviewActionContext);

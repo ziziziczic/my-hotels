@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from 'react';
-import { ReviewContext } from '../_provider/useReview';
+import { ReviewContext } from '../_store/useReviewStore';
 
 export default function Review({ children }: { children: ReactNode }) {
   const { reviewIndex } = useContext(ReviewContext);
