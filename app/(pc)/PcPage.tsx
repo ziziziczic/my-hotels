@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { ReviewContextProvider } from '../_provider/useReview';
 import Review from '../_components/review';
 import Sub from '../_components/sub';
+// import Tabs from './_components/Tabs';
 
 const PcPage = ({ hotelList }: { hotelList: hotelItem[] }) => {
   const [hotels, setHotels] = useState(hotelList);
@@ -20,6 +21,7 @@ const PcPage = ({ hotelList }: { hotelList: hotelItem[] }) => {
           <Sub />
         </Review>
       </ReviewContextProvider>
+      {/* <Tabs /> */}
     </div>
   );
 };
