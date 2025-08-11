@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@tanstack/react-query": "^5.84.2",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.57.0",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "zustand": "^5.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
